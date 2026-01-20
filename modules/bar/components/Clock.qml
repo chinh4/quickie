@@ -1,6 +1,7 @@
 import QtQuick
 import Quickshell
-import qs.globals
+import qs.settings
+import qs.components
 
 Item {
     id: root
@@ -13,9 +14,8 @@ Item {
         precision: SystemClock.Seconds
     }
 
-    Text {
+    StylisedText {
         id: time
         text: Qt.formatDateTime(clock.date, "hh:mm:ss MM/dd/yyyy")
-        color: Colors.foreground
     }
 }

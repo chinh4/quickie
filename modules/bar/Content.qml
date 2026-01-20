@@ -1,8 +1,9 @@
 import QtQuick
 import Quickshell
 
-import qs.globals
+import qs.settings
 import qs.modules.bar.components
+import qs.modules.bar.components.systray
 
 Item {
     id: root
@@ -13,6 +14,7 @@ Item {
             fill: parent
         }
         color: Colors.background
+        opacity: Colors.alpha
         border {
             color: Colors.foreground
             width: Global.borderWidth
@@ -87,6 +89,16 @@ Item {
         }
 
         spacing: Global.barContentSpacing
+
+        Group {
+            id: rightSystrayGroup
+
+            anchors.verticalCenter: parent.verticalCenter
+
+            Systray {
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+        }
 
         Group {
             id: rightControlsGroup

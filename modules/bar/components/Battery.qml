@@ -3,7 +3,7 @@ import QtQuick.Layouts
 import Quickshell
 import Quickshell.Services.UPower
 
-import qs.globals
+import qs.components
 
 Item {
     id: root
@@ -18,9 +18,8 @@ Item {
 
     visible: isBattery
 
-    Text {
+    StylisedText {
         id: battery
         text: isBattery ? Math.round(root.percent * 100) : undefined
-        color: Colors.foreground
     }
 }

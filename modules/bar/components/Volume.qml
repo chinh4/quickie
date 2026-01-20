@@ -1,7 +1,8 @@
 import QtQuick
 import Quickshell
 
-import qs.globals
+import qs.components
+import qs.settings
 import qs.services
 
 Item {
@@ -10,8 +11,7 @@ Item {
     implicitWidth: childrenRect.width
     implicitHeight: childrenRect.height
 
-    Text {
+    StylisedText {
         text: Audio.sinkMuted ? "Muted" : "Volume: " + Math.round(Audio.sinkVolume * 100) + "%"
-        color: Colors.foreground
     }
 }

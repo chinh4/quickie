@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Layouts
 import Quickshell
 
-import qs.globals
+import qs.settings
 
 Scope {
     id: bar
